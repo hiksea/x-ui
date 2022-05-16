@@ -34,12 +34,6 @@ var CF_API_KEY string
 var CF_API_EMAIL string
 var SUBDOMAIN string
 
-OLD_IP = ""
-DOMAIN = ""
-CF_API_KEY = ""
-CF_API_EMAIL = ""
-SUBDOMAIN = ""
-
 // Start CloudFlare
 
 func updateCfSetting(cfDomain string, cfEmail string, cfGlobalAPI string, cfZoneID string, cfRunTime string) {
