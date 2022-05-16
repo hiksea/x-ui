@@ -91,7 +91,7 @@ func updateCfSetting(cfDomain string, cfEmail string, cfGlobalAPI string, cfZone
 			fmt.Println(err)
 			return
 		} else {
-			logger.Infof("updateCfSetting cfRuntime[%s] success", cfRunTime)
+			logger.Infof("updateCfSetting cfRunTime[%s] success", cfRunTime)
 		}
 	}
 }
