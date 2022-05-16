@@ -86,12 +86,12 @@ func updateCfSetting(cfDomain string, cfEmail string, cfGlobalAPI string, cfZone
         }
 
 	if cfRunTime != "" {
-		err := settingService.SetCfRuntime(cfRuntime)
+		err := settingService.SetCfRuntime(cfRunTime)
 		if err != nil {
 			fmt.Println(err)
 			return
 		} else {
-			logger.Infof("updateCfSetting cfRuntime[%s] success", cfRuntime)
+			logger.Infof("updateCfSetting cfRuntime[%s] success", cfRunTime)
 		}
 	}
 }
