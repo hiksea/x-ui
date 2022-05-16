@@ -34,6 +34,12 @@ var CF_API_KEY string
 var CF_API_EMAIL string
 var SUBDOMAIN string
 
+OLD_IP = ""
+DOMAIN = ""
+CF_API_KEY = ""
+CF_API_EMAIL = ""
+SUBDOMAIN = ""
+
 // Start CloudFlare
 
 func updateCfSetting(cfDomain string, cfEmail string, cfGlobalAPI string, cfZoneID string, cfRunTime string) {
@@ -109,26 +115,10 @@ func argParse() error {
 	}
 
 	// Get vars from environment
-	DOMAIN = os.Getenv("DOMAIN")
-	if DOMAIN == "" {
-		msg := fmt.Sprintf("Need to define DOMAIN var")
-		return errors.New(msg)
-	}
-	CF_API_KEY = os.Getenv("CF_API_KEY")
-	if CF_API_KEY == "" {
-		msg := fmt.Sprintf("Need to define CF_API_KEY var")
-		return errors.New(msg)
-	}
-	CF_API_EMAIL = os.Getenv("CF_API_EMAIL")
-	if CF_API_EMAIL == "" {
-		msg := fmt.Sprintf("Need to define CF_API_EMAIL var")
-		return errors.New(msg)
-	}
-	SUBDOMAIN = os.Getenv("SUBDOMAIN")
-	if SUBDOMAIN == "" {
-		msg := fmt.Sprintf("Need to define SUBDOMAIN var")
-		return errors.New(msg)
-	}
+	DOMAIN = cfDomain
+	CF_API_KEY = cfGlobalAPI
+	CF_API_EMAIL = cfEmail
+	SUBDOMAIN = cfZoneID
 
 	return nil
 }
