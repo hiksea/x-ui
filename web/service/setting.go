@@ -273,7 +273,7 @@ func (s *SettingService) GetCfEnable() (bool, error) {
 	return s.getBool("cfEnable")
 }
 
-func (s *SettingService) SetCgRuntime(time string) error {
+func (s *SettingService) SetCfRuntime(time string) error {
         return s.setString("cfRunTime", time)
 }
 
