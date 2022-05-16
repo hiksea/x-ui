@@ -97,6 +97,14 @@ func updateCfSetting(cfDomain string, cfEmail string, cfGlobalAPI string, cfZone
 }
 
 func argParse() error {
+	err := database.InitDB(config.GetDBPath())
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	settingService := service.SettingService{}
+
 	configfile := flag.String("config", "", "Absolute path to the config env file")
 	flag.Parse()
 
