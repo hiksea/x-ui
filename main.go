@@ -109,10 +109,10 @@ func argParse() error {
 	}
 
 	// Get vars from environment
-	DOMAIN = cfDomain
-	CF_API_KEY = cfGlobalAPI
-	CF_API_EMAIL = cfEmail
-	SUBDOMAIN = cfZoneID
+	DOMAIN := settingService.SetCfDomain(cfDomain)
+	CF_API_KEY := settingService.SetCfGlobalAPI(cfGlobalAPI)
+	CF_API_EMAIL := settingService.SetCfEmail(cfEmail)
+	SUBDOMAIN := settingService.SetCfZoneID(cfZoneID)
 
 	return nil
 }
