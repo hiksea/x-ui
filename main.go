@@ -8,7 +8,7 @@ import (
 	"os/signal"
 
 	"errors"
-	"flag"
+//	"flag"
 	"io/ioutil"
 	"net/http"
 	"strings"

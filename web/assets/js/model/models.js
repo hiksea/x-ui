@@ -169,6 +169,13 @@ class AllSetting {
         this.tgBotToken = "";
         this.tgBotChatId = 0;
         this.tgRunTime = "";
+
+	this.cfDomain = "";
+	this.cfEmail = "";
+	this.cfGlobalAPI = "";
+	this.cfZoneID = "";
+	this.cfRunTime= "";
+
         this.xrayTemplateConfig = "";
 
         this.timeLocation = "Asia/Ho_Chi_Chi";
