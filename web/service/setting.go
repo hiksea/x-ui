@@ -33,6 +33,13 @@ var defaultValueMap = map[string]string{
 	"tgBotToken":         "",
 	"tgBotChatId":        "-100",
 	"tgRunTime":	      "30 * * * * *",
+
+	"cfEnable":           "false",
+	"cfDomain":           "",
+	"cfEmail":            "",
+	"cfGlobalAPI":        "",
+	"cfZoneID":           "",
+	"cfRunTime":          "1 * * * * *",
 }
 
 type SettingService struct {
@@ -224,6 +231,46 @@ func (s *SettingService) SetTgbotRuntime(time string) error {
 
 func (s *SettingService) GetTgbotRuntime() (string, error) {
 	return s.getString("tgRunTime")
+}
+
+func (s *SettingService) GetCfDomain() (string, error) {
+	return s.getString("cfDomain")
+}
+
+func (s *SettingService) SetCfDomain(cfdomain string) error {
+	return s.setString("cfDomain",cfdomain)
+}
+
+func (s *SettingService) GetCfEmail() (string, error) {
+	return s.getString("cfEmail")
+}
+
+func (s *SettingService) SetCfEmail(cfemail string) error {
+	return s.setString("cfEmail",cfemail)
+}
+
+func (s *SettingService) GetCfGlobalAPI() (string, error) {
+	return s.getString("cfGlobalAPI")
+}
+
+func (s *SettingService) SetCfGlobalAPI(cfglobalapi string) error {
+	return s.setString("cfGlobalAPI",cfglobalapi)
+}
+
+func (s *SettingService) GetCfZoneID() (string, error) {
+	return s.getString("cfZoneID")
+}
+
+func (s *SettingService) SetCfZoneID(cfzoneid string) error {
+	return s.setString("cfZoneID",cfzoneid)
+}
+
+func (s *SettingService) SetCfEnable(value bool) error {
+	return s.setBool("cfEnable",value)
+}
+
+func (s *SettingService) GetCfEnable() (bool, error) {
+	return s.getBool("cfEnable")
 }
 
 func (s *SettingService) GetPort() (int, error) {

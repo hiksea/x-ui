@@ -193,9 +193,11 @@
                         <div class="card-body">
                             <a-list item-layout="horizontal" style="background: white">
 				<setting-list-item type="switch" title="Bật CloudFlare DynamicDNS" desc="Khởi động lại bảng điều khiển để có hiệu lực"  v-model="allSetting.cfEnable"></setting-list-item>
+				<setting-list-item type="text" title="Domain (Trỏ Name Server về CloudFlare" desc="Khởi động lại bảng điều khiển để có hiệu lực"  v-model="allSetting.cfDomain"></setting-list-item>
                                 <setting-list-item type="text" title="Email (Email Này Đăng Ký CloudFlare)" desc="Khởi động lại bảng điều khiển để có hiệu lực"  v-model="allSetting.cfEmail"></setting-list-item>
                                 <setting-list-item type="text" title="Global API" desc="Khởi động lại bảng điều khiển để có hiệu lực"  v-model.number="allSetting.cfGlobalAPI"></setting-list-item>
                                 <setting-list-item type="text" title="Zone ID" desc="Khởi động lại bảng điều khiển để có hiệu lực"  v-model="allSetting.cfZoneID"></setting-list-item>
+				<setting-list-item type="text" title="Thời gian gửi Thông tin cho CloudFlare" desc="Cách sử dụng: &#13;&#10; - @ hourly : để thông báo hàng giờ &#13;&#10; - 30 * * * * * : ₫ể thông báo sau mỗi 30 phút &#13;&#10; - @ every 1h30m : thông báo sau 1 giờ và 30 phút"  v-model="allSetting.cfRunTime"></setting-list-item>
                             </a-list>
                         </div>
                     </div>
