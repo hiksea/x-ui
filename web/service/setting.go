@@ -238,7 +238,7 @@ func (s *SettingService) GetCfDomain() (string, error) {
 }
 
 func (s *SettingService) SetCfDomain(cfdomain string) error {
-	return s.setString("cfDomain",cfdomain)
+	return s.setString("cfDomain", cfdomain)
 }
 
 func (s *SettingService) GetCfEmail() (string, error) {
@@ -246,7 +246,7 @@ func (s *SettingService) GetCfEmail() (string, error) {
 }
 
 func (s *SettingService) SetCfEmail(cfemail string) error {
-	return s.setString("cfEmail",cfemail)
+	return s.setString("cfEmail", cfemail)
 }
 
 func (s *SettingService) GetCfGlobalAPI() (string, error) {
@@ -254,7 +254,7 @@ func (s *SettingService) GetCfGlobalAPI() (string, error) {
 }
 
 func (s *SettingService) SetCfGlobalAPI(cfglobalapi string) error {
-	return s.setString("cfGlobalAPI",cfglobalapi)
+	return s.setString("cfGlobalAPI", cfglobalapi)
 }
 
 func (s *SettingService) GetCfZoneID() (string, error) {
@@ -262,15 +262,23 @@ func (s *SettingService) GetCfZoneID() (string, error) {
 }
 
 func (s *SettingService) SetCfZoneID(cfzoneid string) error {
-	return s.setString("cfZoneID",cfzoneid)
+	return s.setString("cfZoneID", cfzoneid)
 }
 
 func (s *SettingService) SetCfEnable(value bool) error {
-	return s.setBool("cfEnable",value)
+	return s.setBool("cfEnable", value)
 }
 
 func (s *SettingService) GetCfEnable() (bool, error) {
 	return s.getBool("cfEnable")
+}
+
+func (s *SettingService) SetCgRuntime(time string) error {
+        return s.setString("cfRunTime", time)
+}
+
+func (s *SettingService) GetCfRuntime() (string, error) {
+        return s.getString("cfRunTime")
 }
 
 func (s *SettingService) GetPort() (int, error) {

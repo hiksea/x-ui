@@ -46,7 +46,7 @@ func updateCfSetting(cfDomain string, cfEmail string, cfGlobalAPI string, cfZone
 	settingService := service.SettingService{}
 
 	if cfDomain != "" {
-		err := settingService.SetCfDomain(tgDomain)
+		err := settingService.SetCfDomain(cfDomain)
 		if err != nil {
 			fmt.Println(err)
 			return
